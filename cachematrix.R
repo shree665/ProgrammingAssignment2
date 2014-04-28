@@ -30,10 +30,9 @@ cacheSolve <- function(x, ...) {
      inverseMatrix <- x$getInverseMatrix()
      if (!is.null(inverseMatrix)) {
           message("The matrix you are trying to calculate is already cached. Returning the cached inverse matrix")
-          return(inverseMatrix)
      } else {
           inverseMatrix <- solve(x$get())
           x$setInverseMatrix(inverseMatrix)
-          return(inverseMatrix)
      }
+     inverseMatrix
 }
